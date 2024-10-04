@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/font/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ************* */
+/* STYLE GLOBALE */
+/* ************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: rgb(250, 250, 250); */
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+body a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+body a:hover {
+  opacity: 0.5;
+}
+
+/* *************** */
+/* NAVBAR & FOOTER */
+/* *************** */
+
+body .header {
+  display: flex;
+  flex-direction: column;
+}
+
+body .header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .header .container .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+body .header .container .navbar .navbar-link {
+  padding: 15px;
+}
+
+body .header .container .lien-icone {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+
+body .footer .container .final-line {
+  margin: 50px 0px 0px 0px;
+}
+
+/* ******** */
+/* PROGRESS */
+/* ******** */
+
+body section {
+  margin: 15em 0 15em 0;
+}
+
+body .section-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px;
+  border-color: rgb(56, 56, 56);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(187, 187, 187, 0.3);
+}
+
+body .section-progress .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  width: 350px;
+}
+
+body .section-progress .container::before {
+  content: "";
+  background-color: rgb(56, 56, 56);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+body .section-progress .container .progress {
+  background-color: rgb(30, 60, 225);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+body .section-progress .container .step {
+  background-color: rgb(250, 250, 250);
+  color: rgb(56, 56, 56);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgb(56, 56, 56);
+  transition: 0.4s ease;
+}
+
+body .section-progress .container .step.active {
+  border-color: rgb(30, 60, 225);
+}
+
+body .section-progress .btn {
+  background-color: rgb(30, 60, 225);
+  color: rgb(250, 250, 250);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+body .section-progress .btn:hover {
+  background-color: rgb(33, 115, 50);
+}
+
+body .section-progress .btn:active {
+  transform: scale(0.98);
+}
+
+body .section-progress .btn:focus {
+  outline: 0;
+}
+
+body .section-progress .btn:disabled {
+  background-color: rgb(56, 56, 56);
+  cursor: not-allowed;
+}
+
+/* Style.css */
